@@ -21,8 +21,8 @@ body{font-family:"Fredoka",ui-rounded,"Segoe UI",system-ui,Arial,sans-serif;colo
   -webkit-box-shadow:0 6px 16px rgba(50,40,20,.24);box-shadow:0 6px 16px rgba(50,40,20,.24)}
 .balao b{color:var(--tinta-d)}
 .centro{-webkit-box-flex:1;-webkit-flex:1;flex:1;display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:100%}
-h1{font-size:31px;font-weight:700;color:#fff;text-shadow:0 2px 0 var(--tinta-d),0 4px 10px rgba(0,0,0,.3);margin:6px 0 2px;text-align:center}
-.sub{font-size:15px;color:#fff;font-weight:600;margin-bottom:10px;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+h1{font-size:31px;font-weight:700;color:#fff;text-shadow:0 2px 0 var(--tinta-d),0 4px 10px rgba(0,0,0,.3);margin:6px 0 2px;text-align:center;background:rgba(45,32,14,.72);padding:5px 16px;border-radius:18px}
+.sub{font-size:15px;color:#fff;font-weight:600;margin-bottom:10px;text-shadow:0 1px 4px rgba(0,0,0,.4);background:rgba(45,32,14,.78);padding:6px 14px;border-radius:999px}
 /* mascote em camadas (lip-sync) */
 .clique{position:relative;width:186px;height:186px;-webkit-filter:drop-shadow(0 8px 10px rgba(0,0,0,.25));filter:drop-shadow(0 8px 10px rgba(0,0,0,.25));-webkit-animation:bob 2.8s ease-in-out infinite;animation:bob 2.8s ease-in-out infinite}
 .clique.gg{width:252px;height:252px}.clique.pq{width:136px;height:136px}
@@ -91,7 +91,7 @@ h1{font-size:31px;font-weight:700;color:#fff;text-shadow:0 2px 0 var(--tinta-d),
 .campo{width:100%;max-width:310px;font-family:inherit;font-size:17px;font-weight:600;padding:13px 15px;border-radius:16px;border:2px solid var(--linha);text-align:center;margin-top:10px;color:var(--texto)}
 .banner{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:16px 16px calc(18px + env(safe-area-inset-bottom));max-width:520px;margin:0 auto;
   -webkit-transform:translateY(115%);transform:translateY(115%);-webkit-transition:-webkit-transform .35s cubic-bezier(.2,.8,.3,1);transition:transform .35s cubic-bezier(.2,.8,.3,1);border-top-left-radius:24px;border-top-right-radius:24px}
-.banner.show{-webkit-transform:none;transform:none}.banner.bom{background:#dfeeff}
+.banner{pointer-events:none}.banner.show{-webkit-transform:none;transform:none;pointer-events:auto}.banner.bom{background:#dfeeff}
 .banner .msg{font-size:17px;font-weight:700;color:var(--tinta-d);margin-bottom:11px;text-align:center}
 .banner .cta2{width:100%;border:0;cursor:pointer;font-family:inherit;font-weight:700;font-size:17px;color:#fff;padding:14px;border-radius:16px;background:var(--tinta);-webkit-box-shadow:0 4px 0 var(--tinta-d);box-shadow:0 4px 0 var(--tinta-d);text-transform:uppercase}
 #conf{position:fixed;inset:0;z-index:15;pointer-events:none}
@@ -278,7 +278,7 @@ h1{font-size:31px;font-weight:700;color:#fff;text-shadow:0 2px 0 var(--tinta-d),
 .pc.sub{border-radius:999px;background:-webkit-linear-gradient(top,#6bd23f,#3f9a26);background:linear-gradient(#6bd23f,#3f9a26)}
 .pc.adj{border-radius:9px;background:-webkit-linear-gradient(top,#ffb45e,#ef8a1e);background:linear-gradient(#ffb45e,#ef8a1e);-webkit-clip-path:polygon(12% 0,100% 0,88% 100%,0 100%);clip-path:polygon(12% 0,100% 0,88% 100%,0 100%);padding:0 19px}
 .pc.usada{opacity:.22;pointer-events:none}
-.pc.no{-webkit-animation:shk .4s;animation:shk .4s}
+.pc.no{-webkit-animation:shk .4s;animation:shk .4s}\n.pc.fantasma{position:fixed;z-index:30;pointer-events:none;opacity:.96;margin:0;\n  -webkit-transform:scale(1.06);transform:scale(1.06);\n  -webkit-box-shadow:0 12px 22px rgba(0,0,0,.45);box-shadow:0 12px 22px rgba(0,0,0,.45)}\n.vaga.mira{border-style:solid;border-color:#ffd43b;background:rgba(255,212,59,.34)}
 .legenda{display:-webkit-box;display:-webkit-flex;display:flex;gap:12px;-webkit-box-pack:center;justify-content:center;margin-top:10px;font-size:11.5px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)}
 .legenda i{display:inline-block;width:15px;height:12px;margin-right:4px;vertical-align:-1px}
 .legenda .la{border-radius:3px;background:#2f6bd8}
@@ -312,10 +312,11 @@ h1{font-size:31px;font-weight:700;color:#fff;text-shadow:0 2px 0 var(--tinta-d),
 .cracha .ctx{text-align:left;min-width:0}
 .cracha .csel{font-size:11px;font-weight:700;letter-spacing:.6px;color:var(--tinta-d)}
 .cracha .cnome{font-size:20px;font-weight:700;color:var(--texto);line-height:1.15;word-break:break-word}
-.cracha .cfun{font-size:12px;font-weight:600;color:#8a7f68}
+.cracha .cfun{font-size:12px;font-weight:600;color:#6b6252}
 .cracha:before{content:"";position:absolute;top:-7px;left:50%;margin-left:-11px;width:22px;height:9px;border:2px solid var(--linha);border-bottom:0;border-radius:11px 11px 0 0;background:transparent}
 .grade{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;width:100%;max-width:328px;margin-top:8px;background:var(--papel);border:2px solid var(--linha);border-radius:14px;padding:5px}
 .cel{width:11.11%;padding-top:0;height:32px;line-height:32px;text-align:center;font-size:15px;font-weight:700;cursor:pointer;color:#5a5346;border-radius:6px}
+.cel{min-height:34px}
 .cel.sel{background:var(--dourado);color:#5a4200}
 .cel.ok{background:#cdf0bd;color:#2c6b13}
 .cel.no{background:#ffd3cd;color:#8e2418}
@@ -338,6 +339,218 @@ h1{font-size:31px;font-weight:700;color:#fff;text-shadow:0 2px 0 var(--tinta-d),
 .bin.nao{background:-webkit-linear-gradient(top,#ff9a8f,#ef5a4a);background:linear-gradient(#ff9a8f,#ef5a4a)}
 .btn.peq{font-size:17px;padding:13px 26px;-webkit-animation:none;animation:none}
 @media (max-height:900px){ .bin{width:126px;padding:13px 8px;font-size:15px} }
+
+/* ===== JANELA BAIXA e LETRA MAIOR — mesmo conserto da Doceria (ago/2026) =====
+   ⚠️ LICAO PAGA (foto do Marcos): numa janela baixa as OPCOES DE RESPOSTA caiam
+   fora da tela e a crianca via so o enunciado. E no computador a letra ficava
+   pequena. Sao tres casos, e este bloco fica no FIM do CSS para ganhar dos outros.
+
+   1) TELA GRANDE: letra maior (o monitor fica longe do olho).
+      ATENCAO: o monitor 1366x768 da escola e MAIS BAIXO que um celular (~640px de
+      janela util). Por isso o aumento e so de LETRA quando a janela e baixa.      */
+@media (min-width:760px) and (min-height:560px){
+  .balao{font-size:20px;max-width:560px;padding:14px 19px}
+  .dicain{font-size:19px}
+  h1{font-size:38px}
+  .sub{font-size:18px}
+  .selo{font-size:15px;padding:6px 15px}
+  .hint{font-size:16px}
+  .opt{font-size:19px}
+  .btn{font-size:22px}
+  .mini{font-size:17px}
+  .campo{font-size:20px}
+  .banner .msg,.banner .cta2{font-size:20px}
+  .pal,.pc,.peca,.vaga,.lig,.tlin,.fichaP{font-size:18px}
+  .cx .cxt{font-size:16px}
+  .cel{font-size:18px}
+  .pchip{font-size:16px}
+  .relcard{font-size:32px}
+  .bin{font-size:19px}
+  .cracha .cnome{font-size:24px}
+}
+@media (min-width:760px) and (min-height:880px){
+  .balao{font-size:22px;padding:16px 21px}
+  h1{font-size:42px}
+}
+/* 2) JANELA BAIXA: tudo encolhe para a RESPOSTA nunca cair fora da tela */
+@media (max-height:600px){
+  .tela{padding:calc(28px + env(safe-area-inset-top)) 12px calc(62px + env(safe-area-inset-bottom))}
+  h1{font-size:26px}.sub{font-size:13.5px;margin-bottom:6px}
+  .selo{font-size:11px;padding:4px 10px;margin-bottom:5px}
+  .balao{font-size:15px;padding:9px 13px;line-height:1.28}
+  .dicain{font-size:14px}
+  .hint{font-size:12px;margin-top:7px}
+  .opts{margin-top:9px;gap:7px}
+  .opt{padding:8px 11px;font-size:15px;border-bottom-width:4px}
+  .pcs{margin-top:9px;gap:6px}
+  .pc,.peca,.vaga{padding:7px 11px;font-size:14.5px}
+  .frase{margin-top:9px;gap:5px}.pal{padding:6px 9px;font-size:15px}
+  .cols{gap:7px}.lig{padding:6px 5px;font-size:12.5px;min-height:40px}
+  .cel{font-size:12.5px;height:30px;line-height:30px}
+  .pchip{font-size:11.5px;padding:3px 8px}
+  .btn{font-size:17px;padding:11px 20px;min-height:42px}
+  .relcard{font-size:22px}
+  .cx{padding:8px 10px}.cx .cxt{font-size:12.5px}.cx .cxn{font-size:17px}
+  .campo{font-size:16px;padding:9px 12px}
+}
+/* 3) JANELA MUITO BAIXA (~430px): ultimo aperto */
+@media (max-height:430px){
+  .tela{padding:calc(24px + env(safe-area-inset-top)) 10px calc(56px + env(safe-area-inset-bottom))}
+  .selo{font-size:10px;padding:3px 9px;margin-bottom:4px}
+  .balao{font-size:14px;padding:7px 11px}
+  .opts{margin-top:7px;gap:5px}
+  .opt{padding:6px 10px;font-size:14px}
+  .pc,.peca,.vaga{padding:5px 9px;font-size:13.5px}
+  .pal{padding:5px 8px;font-size:14px}
+  .cel{font-size:11.5px;height:27px;line-height:27px}
+  .hint{display:none}
+  .btn{font-size:16px;padding:11px 18px;min-height:42px}
+}
+
+/* ⚠️ ERRO PAGO (Marcos, ago/2026): a caixa de explicacao ficava COLADA na imagem
+   (0px de vao na Redacao, 9px na Legenda). Consertar bloco por bloco nao pega
+   todos — cada tela monta uma coisa diferente antes do balao. Regra unica: TODO
+   balao que vem depois de alguma coisa ganha ar. Depois do selo fica curto, que
+   ali eles sao um par. Medir com /tmp/vao.js, nao confiar no olho.            */
+.centro > .balao{margin-top:15px}
+.centro > .selo + .balao{margin-top:6px}
+.centro > .pedido{margin-top:15px}
+@media (max-height:600px){
+  .centro > .balao{margin-top:9px}
+  .centro > .pedido{margin-top:9px}
+}
+
+@media (max-height:600px){
+  .polaroid{padding:6px 6px 20px;margin-top:4px;margin-bottom:8px}
+  .polaroid img{width:150px;height:112px}
+  .polaroid .cap{font-size:11px}
+  .foto{width:190px;height:142px;padding:6px}
+  .gfoto img{width:74px;height:56px}
+  .gfoto{padding:4px;border-width:2px}
+  .galeria{margin:8px 0;gap:6px}
+  .jornal{width:214px;margin-top:6px}
+  .clique,.pingo,.cacau{width:96px;height:96px}
+  .clique.gg,.pingo.gg,.cacau.gg{width:128px;height:128px}
+  .clique.pq,.pingo.pq,.cacau.pq{width:74px;height:74px}
+}
+@media (max-height:430px){
+  .polaroid img{width:112px;height:84px}
+  .foto{width:150px;height:112px;padding:5px}
+  .gfoto img{width:60px;height:46px}
+  .jornal{width:186px}
+  .clique,.pingo,.cacau{width:74px;height:74px}
+  .clique.gg,.pingo.gg,.cacau.gg{width:96px;height:96px}
+  .clique.pq,.pingo.pq,.cacau.pq{width:58px;height:58px}
+}
+
+/* janela EXTREMA (~360px de altura, como a foto que o Marcos mandou):
+   ultimo recurso — o titulo da fase sai e a imagem encolhe, para a RESPOSTA
+   nunca ficar fora do alcance. Melhor perder o enfeite do que a resposta. */
+@media (max-height:380px){
+  .tela{padding:calc(16px + env(safe-area-inset-top)) 8px calc(50px + env(safe-area-inset-bottom))}
+  .selo{display:none}
+  .balao{font-size:13px;padding:6px 10px}
+  .centro > .balao{margin-top:9px}
+  .opts{margin-top:6px;gap:4px}
+  .opt{padding:5px 9px;font-size:13px;border-bottom-width:3px}
+  .polaroid{padding:4px 4px 14px;margin:2px 0 5px}
+  .polaroid img{width:96px;height:72px}
+  .polaroid .cap{display:none}
+  .foto{width:124px;height:94px;padding:4px}
+  .gfoto img{width:52px;height:40px}
+  .jornal{width:170px}
+  .clique,.pingo,.cacau{width:60px;height:60px}
+  .bandeja{min-width:50px;min-height:38px}
+  .bandeja .doces{min-height:28px}.bandeja .doces img{width:13px;height:13px}
+}
+
+
+.painel .dom{color:#1e6b10;font-weight:800}
+.painel .cons{color:#8a6a00;font-weight:800}
+.painel .ret{color:#a33020;font-weight:800}
+.painel .resumo{background:#f2f7ea;border:2px solid #cfe0b8;border-radius:12px;padding:10px 12px;margin:10px 0;font-weight:600}
+
+/* boletim animado do fim (a crianca ve) */
+.boletim{background:rgba(255,253,244,.97);border:2px solid var(--linha);border-bottom-width:6px;
+  border-radius:20px;padding:13px 15px;margin-top:12px;width:100%;max-width:360px;
+  -webkit-box-shadow:0 8px 20px rgba(50,40,20,.26);box-shadow:0 8px 20px rgba(50,40,20,.26);
+  -webkit-animation:sobe .5s both .15s;animation:sobe .5s both .15s}
+@-webkit-keyframes sobe{from{opacity:0;-webkit-transform:translateY(16px)}to{opacity:1;-webkit-transform:none}}
+@keyframes sobe{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.boletim .btit{font-size:12px;font-weight:800;letter-spacing:.6px;color:#6b6252;text-align:center;margin-bottom:9px}
+.blin{margin-bottom:9px}
+.btop{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;align-items:center;
+  -webkit-box-pack:justify;justify-content:space-between;gap:8px;margin-bottom:3px}
+.bnome{font-size:13px;font-weight:700;color:#4a4232;text-align:left;line-height:1.2}
+.bestrelas{display:-webkit-box;display:-webkit-flex;display:flex;gap:3px;-webkit-flex-shrink:0;flex-shrink:0}
+.estrela{display:block;width:15px;height:15px;background:#ded6c2;
+  -webkit-clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+  clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.estrela.on{background:#eab000;-webkit-animation:estpop .45s both;animation:estpop .45s both}
+@-webkit-keyframes estpop{0%{-webkit-transform:scale(.2) rotate(-40deg);opacity:0}
+  70%{-webkit-transform:scale(1.35) rotate(6deg);opacity:1}100%{-webkit-transform:none;opacity:1}}
+@keyframes estpop{0%{transform:scale(.2) rotate(-40deg);opacity:0}
+  70%{transform:scale(1.35) rotate(6deg);opacity:1}100%{transform:none;opacity:1}}
+.bbar{height:9px;background:#ece4d2;border-radius:999px;overflow:hidden}
+.bbar i{display:block;height:100%;width:0;border-radius:999px;
+  background:-webkit-linear-gradient(left,#8be05a,#2f8f18);background:linear-gradient(90deg,#8be05a,#2f8f18);
+  -webkit-transition:width 1.1s cubic-bezier(.2,.9,.3,1);transition:width 1.1s cubic-bezier(.2,.9,.3,1)}
+.bplacar{margin-top:10px;text-align:center;font-size:19px;font-weight:800;color:#4a4232}
+.bplacar b{font-size:27px;color:#2f8f18}
+.btempo{text-align:center;font-size:13px;font-weight:600;color:#6b6252;margin-top:2px}
+.bfrase{text-align:center;font-size:14.5px;font-weight:700;color:#4a4232;margin-top:8px;line-height:1.3}
+@media (max-height:600px){
+  .boletim{padding:9px 11px;margin-top:8px;max-width:330px}
+  .bnome{font-size:11.5px}.estrela{width:12px;height:12px}
+  .bbar{height:7px}.blin{margin-bottom:6px}
+  .bplacar{font-size:16px;margin-top:7px}.bplacar b{font-size:22px}
+  .btempo{font-size:11.5px}.bfrase{font-size:12.5px;margin-top:6px}
+}
+
+.btntreino{margin-top:10px;border:0;cursor:pointer;font-family:inherit;font-weight:800;font-size:17px;
+  color:#fff;padding:13px 22px;border-radius:999px;
+  background:-webkit-linear-gradient(top,#3f9a26,#256113);background:linear-gradient(#3f9a26,#256113);
+  -webkit-box-shadow:0 5px 0 #1b4a0c,0 10px 16px rgba(0,0,0,.25);box-shadow:0 5px 0 #1b4a0c,0 10px 16px rgba(0,0,0,.25)}
+.btntreino small{display:block;font-size:12px;font-weight:600;opacity:.92;margin-top:2px}
+
+/* ===== CONTRASTE (banca de acessibilidade, ago/2026) =====
+   O app nasceu antes do auditor de contraste. Ele mediu o PIXEL real atras de
+   cada texto e reprovou 59: branco sobre laranja/verde claro e branco com
+   sombra sobre o fundo creme. Aqui a paleta so escurece o suficiente para
+   passar o minimo WCAG (4.5:1) sem mudar a cara do jornal.                   */
+.hint,.placar{background:rgba(46,36,20,.88);padding:6px 13px;border-radius:999px;
+  max-width:340px;text-align:center;line-height:1.3;display:inline-block;text-shadow:none}
+.legenda{background:rgba(46,36,20,.88);padding:5px 12px;border-radius:999px;text-shadow:none;
+  -webkit-align-self:center;align-self:center}
+.cnum{color:#4a4230;text-shadow:none}
+.selo{background:#5b3fd0}
+.encaixe{color:#5c5544;border-color:#b8ad93}
+.pc.art,.vaga.art.cheia{background:-webkit-linear-gradient(top,#4a7fd8,#17408f);background:linear-gradient(#4a7fd8,#17408f)}
+.pc.sub,.vaga.sub.cheia{background:-webkit-linear-gradient(top,#43a01e,#1e6410);background:linear-gradient(#43a01e,#1e6410)}
+.pc.adj,.vaga.adj.cheia{color:#3d1d00}
+.legenda .la{background:#17408f}
+.legenda .ls{background:#1e6410}
+.bin.sim{background:-webkit-linear-gradient(top,#43a01e,#1e6410);background:linear-gradient(#43a01e,#1e6410)}
+.btn{background:-webkit-linear-gradient(top,#3f7ae0,#17408f);background:linear-gradient(#3f7ae0,#17408f)}
+.btntreino{background:-webkit-linear-gradient(top,#2f7f1b,#164008);background:linear-gradient(#2f7f1b,#164008);
+  max-width:330px}
+.bin.nao{background:-webkit-linear-gradient(top,#e2503f,#a32a1c);background:linear-gradient(#e2503f,#a32a1c)}
+/* a tela final ficou mais alta com o boletim e o botao de treino sumia atras
+   da barra de baixo (armadilha ja anotada no _padrao/FIM-DE-ATIVIDADE.md) */
+.tela{padding-bottom:calc(118px + env(safe-area-inset-bottom))}
+.centro.topo{-webkit-box-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start}
+/* a tela final junta medalha + cracha + boletim + dois botoes: no telefone ela
+   passava de 1000px e o botao de treino ficava ATRAS da barra de baixo. Aqui
+   ela e compactada para caber inteira sem rolagem. */
+.centro.topo .medal{width:132px;height:132px}
+.centro.topo h1{font-size:25px;padding:4px 14px;margin:4px 0 2px}
+.centro.topo .sub{font-size:12.5px;margin-bottom:6px;padding:4px 11px}
+.centro.topo .cracha{margin-top:8px;padding:7px 14px 7px 7px}
+.centro.topo .cracha .cfoto{width:48px;height:48px}
+.centro.topo .cracha .cnome{font-size:17px}
+.centro.topo .boletim{margin-top:8px;padding:9px 12px}
+.centro.topo .btntreino{margin-top:8px;padding:10px 18px;font-size:16px}
+.centro.topo .btn{margin-top:8px;padding:12px 26px;font-size:17px}
 </style></head>
 <body>
 <div id="bg"></div>
@@ -490,7 +703,7 @@ function fraseEl(palavras,alvo,onOk,onNo){
   return f;
 }
 /* ============ ALTO-FALANTE POR RESPOSTA (acessibilidade) ============ */
-var VOZOK={"16f2j57": 1, "1dfmeew": 1, "1dsqjie": 1, "1dsqjis": 1, "1e8uhxx": 1, "1ia96rw": 1, "1luu99y": 1, "1n4f6zf": 1, "1n4f6zt": 1, "1n4xc7d": 1, "1tj48ab": 1, "1uig9ax": 1, "1utku7s": 1, "1uxu5r3": 1, "1v58791": 1, "1v5879b": 1, "1v6ympz": 1, "1vab3zq": 1, "1vkvlgl": 1, "1w2innf": 1, "1wd06tb": 1, "1x1qg3o": 1, "1xvc01o": 1, "1xvc58o": 1, "1xvc592": 1, "1y3cof9": 1, "35vmg8": 1, "35yp1u": 1, "35yp28": 1, "375ybo": 1, "3ho3d": 1, "3qyvqj": 1, "3t3a": 1, "3t3o": 1, "482oxo": 1, "4br3s3": 1, "4eg1d2": 1, "4fzp1o": 1, "4fzpei": 1, "4lf40l": 1, "4lf40z": 1, "50opdt": 1, "584lel": 1, "5w0wos": 1, "7xyjal": 1, "8217sk": 1, "9f2c04": 1, "9kmko8": 1, "9mqmih": 1, "dsax1h": 1, "du0y4o": 1, "ff94b0": 1, "gvmyd": 1, "h4538y": 1, "h4539c": 1, "h74xqk": 1, "hgqh0a": 1, "l3qgm1": 1, "p7q8ng": 1, "sc3sk2": 1, "srbyl4": 1, "wee275": 1, "wqj1tn": 1, "x7vxks": 1, "xoip5a": 1, "yj9k0e": 1, "yj9pao": 1, "yj9pfn": 1, "ykhjdk": 1, "yknrw9": 1, "yknrwn": 1, "zqm2qs": 1};
+var VOZOK={"16f2j57": 1, "1dfmeew": 1, "1dsqjie": 1, "1dsqjis": 1, "1e8uhxx": 1, "1ia96rw": 1, "1luu99y": 1, "1n4f6zf": 1, "1n4f6zt": 1, "1n4xc7d": 1, "1tj48ab": 1, "1uig9ax": 1, "1utku7s": 1, "1uxu5r3": 1, "1v58791": 1, "1v5879b": 1, "1v6ympz": 1, "1vab3zq": 1, "1vkvlgl": 1, "1w2innf": 1, "1wd06tb": 1, "1x1qg3o": 1, "1xvc01o": 1, "1xvc58o": 1, "1xvc592": 1, "1y3cof9": 1, "35vmg8": 1, "35yp1u": 1, "35yp28": 1, "375ybo": 1, "3ho3d": 1, "3qyvqj": 1, "3t3a": 1, "3t3o": 1, "482oxo": 1, "4br3s3": 1, "4eg1d2": 1, "4fzp1o": 1, "4fzpei": 1, "4lf40l": 1, "4lf40z": 1, "50opdt": 1, "584lel": 1, "5w0wos": 1, "7xyjal": 1, "8217sk": 1, "9f2c04": 1, "9kmko8": 1, "9mqmih": 1, "dsax1h": 1, "du0y4o": 1, "eeq97c": 1, "ff94b0": 1, "gvmyd": 1, "h4538y": 1, "h4539c": 1, "h74xqk": 1, "hgqh0a": 1, "l3qgm1": 1, "p7q8ng": 1, "sc3sk2": 1, "srbyl4": 1, "wee275": 1, "wqj1tn": 1, "x7vxks": 1, "xoip5a": 1, "yj9k0e": 1, "yj9pao": 1, "yj9pfn": 1, "ykhjdk": 1, "yknrw9": 1, "yknrwn": 1, "zqm2qs": 1};
 var vz=document.getElementById("vz"), zapAtual=null;
 function chaveVoz(s){
   s=(s||"").replace(/\s+/g," ").replace(/^ | $/g,"").toLowerCase();
@@ -641,7 +854,7 @@ var GAV=[
  {p:"port&#227;o",g:0},{p:"enferrujado",g:1},{p:"crian&#231;as",g:0},{p:"alegres",g:1},
  {p:"bicicleta",g:0},{p:"colorida",g:1},{p:"horta",g:0},{p:"nova",g:1}];
 function nCaixas(){
-  limpa();var t=el("div","tela");setProg(t,23);
+  limpa();var t=el("div","tela");setProg(t,18);
   var fila=baguncar(GAV.slice(0)),i2=0,err=0,fim=false,contas=[0,0];
   var c=el("div","centro");
   c.appendChild(el("div","selo","AS DUAS GAVETAS"));
@@ -664,7 +877,7 @@ function nCaixas(){
       reg("reconhecer",err===0,err+1); err=0;
       setTimeout(function(){ d.className="cx"; i2++;
         if(i2>=fila.length){ fim=true; depoisDaFala("nm_caixa_revela",9000,function(){
-          mostraBanner("<b>Substantivo</b> nomeia. <b>Adjetivo</b> descreve.",nGrupo); }); }
+          mostraBanner("<b>Substantivo</b> nomeia. <b>Adjetivo</b> descreve.",nMagica); }); }
         else mostra();
       },420);
     } else { err++; sErro(); consolo(); d.className="cx no";
@@ -687,46 +900,117 @@ function nGrupo(){
   var idx=0,err=0;
   var ordem=[0,1,3,4];
   function passo(){
-    limpa();var t=el("div","tela");setProg(t,32+idx*4);
+    limpa();var t=el("div","tela");setProg(t,50+idx*3);
     var f=FOTOS[ordem[idx]];
     var c=el("div","centro");
     c.appendChild(el("div","selo","BANCADA DE MONTAGEM"));
     c.appendChild(fotoEl(f.img,""));
-    c.appendChild(el("div","balao","Monte a legenda encaixando as <b>tr&#234;s pe&#231;as</b>."));
+    c.appendChild(el("div","balao","Monte a legenda: <b>arraste</b> a pe&#231;a at&#233; a vaga, ou s&#243; <b>toque</b> nela."));
     var alvo=[{cl:"art",tx:f.art},{cl:"sub",tx:f.sub},{cl:"adj",tx:f.adj}];
     var vagas=el("div","vagas"),vs=[],i;
     for(i=0;i<3;i++){ var v=el("div","vaga "+alvo[i].cl,""); vagas.appendChild(v); vs.push(v); }
     c.appendChild(vagas);
     c.appendChild(legendaFormas());
-    var passoAtual=0;
+    var cheias={},nCheias=0,fim=false;
     var pool=[{cl:"art",tx:f.art},{cl:"sub",tx:f.sub},{cl:"adj",tx:f.adj},
               {cl:"art",tx:(f.art==="o"?"a":"o")},{cl:"adj",tx:"r&#225;pido"}];
     baguncar(pool);
     var box=el("div","pcs");
+
+    /* ---- encaixe ----
+       Antes a fase exigia a ORDEM artigo, substantivo, adjetivo e recusava
+       qualquer outra sem explicar: quem come&#231;ava pelo substantivo ficava preso
+       para sempre. Agora cada pe&#231;a procura a vaga da FORMA dela, em qualquer
+       ordem, e a mesma fun&#231;&#227;o serve para o toque e para o arrasto.        */
+    function vagaLivreDe(cl){ var k; for(k=0;k<3;k++) if(alvo[k].cl===cl&&!cheias[k]) return k; return -1; }
+    function vagaSob(x,y){ var k,r;
+      for(k=0;k<3;k++){ if(cheias[k]) continue; r=vs[k].getBoundingClientRect();
+        if(x>=r.left-16&&x<=r.right+16&&y>=r.top-16&&y<=r.bottom+16) return k; }
+      return -1; }
+    function erra(b,p){ err++; b.className="pc "+p.cl+" no"; sErro();
+      setTimeout(function(){ if(b.className.indexOf("no")>=0) b.className="pc "+p.cl; },440);
+      if(err===3) consolo(); }
+    function encaixa(p,b,k){
+      if(fim||b.className.indexOf("usada")>=0) return;
+      if(k<0) k=vagaLivreDe(p.cl);
+      if(k<0||alvo[k].cl!==p.cl||alvo[k].tx!==p.tx){ erra(b,p); return; }
+      vs[k].innerHTML=p.tx; vs[k].className="vaga "+p.cl+" cheia";
+      b.className="pc "+p.cl+" usada"; cheias[k]=1; nCheias++; sPop(nCheias);
+      if(nCheias>=3){
+        fim=true; sCerto(); reg("grupo",err===0,err+1);
+        var ce=centroTela(vagas); faisca(ce[0],ce[1],"#ffb45e",16);
+        setTimeout(function(){ idx++;
+          if(idx>=ordem.length){ depoisDaFala("nm_grupo_revela",9000,function(){
+            mostraBanner("Artigo, substantivo e adjetivo formam o <b>grupo nominal</b>!",nAquecimento); }); }
+          else { err=0; passo(); }
+        },1000);
+      }
+    }
+
+    /* ---- arrastar (mouse E dedo) ----
+       Pedido do Marcos (ago/2026): "quero as duas op&#231;&#245;es funcionando". A pe&#231;a
+       PARECE que se arrasta, ent&#227;o tem que arrastar mesmo; e o toque simples
+       continua valendo para quem n&#227;o consegue arrastar.
+       Detalhe pago: NAO dar preventDefault no touchstart — isso cancelaria o
+       clique sint&#233;tico e mataria justamente a op&#231;&#227;o do toque.              */
+    function daArrasto(b,p){
+      var g=null,dx=0,dy=0,x0=0,y0=0,pegou=false,moveu=false,tratado=0;
+      function pto(e){ var s=(e.touches&&e.touches[0])||(e.changedTouches&&e.changedTouches[0])||e;
+        return [s.clientX,s.clientY]; }
+      function mira(z){ var k; for(k=0;k<3;k++) if(!cheias[k]) vs[k].className="vaga "+alvo[k].cl+(k===z?" mira":""); }
+      function limpaMira(){ var k; for(k=0;k<3;k++) if(!cheias[k]) vs[k].className="vaga "+alvo[k].cl; }
+      function comeca(e){
+        if(fim||b.className.indexOf("usada")>=0) return;
+        var q=pto(e),r=b.getBoundingClientRect();
+        dx=q[0]-r.left; dy=q[1]-r.top; x0=q[0]; y0=q[1]; moveu=false; pegou=true;
+        g=b.cloneNode(true); g.className=b.className+" fantasma";
+        g.style.width=r.width+"px"; g.style.height=r.height+"px";
+        g.style.left=r.left+"px"; g.style.top=r.top+"px";
+        document.body.appendChild(g); b.style.opacity=".3";
+        if(e.type==="mousedown"){
+          document.addEventListener("mousemove",move);
+          document.addEventListener("mouseup",solta);
+          if(e.preventDefault) e.preventDefault();
+        }
+      }
+      function move(e){
+        if(!pegou) return;
+        var q=pto(e);
+        if(!moveu&&(Math.abs(q[0]-x0)>6||Math.abs(q[1]-y0)>6)) moveu=true;
+        g.style.left=(q[0]-dx)+"px"; g.style.top=(q[1]-dy)+"px";
+        mira(vagaSob(q[0],q[1]));
+        if(moveu&&e.preventDefault) e.preventDefault();
+      }
+      function solta(e){
+        if(!pegou) return; pegou=false;
+        document.removeEventListener("mousemove",move);
+        document.removeEventListener("mouseup",solta);
+        var q=pto(e);
+        if(g&&g.parentNode) g.parentNode.removeChild(g);
+        g=null; b.style.opacity=""; limpaMira();
+        tratado=(new Date()).getTime();
+        if(moveu){ var k=vagaSob(q[0],q[1]);
+          if(k>=0){ arma(); encaixa(p,b,k); }        /* soltou na vaga */
+          /* soltou no vazio: a peca so volta para o lugar, sem penalidade */
+        } else { arma(); encaixa(p,b,-1); }          /* foi um toque, nao um arrasto */
+      }
+      b.addEventListener("mousedown",comeca);
+      b.addEventListener("touchstart",comeca);
+      b.addEventListener("touchmove",move);
+      b.addEventListener("touchend",solta);
+      b.addEventListener("touchcancel",solta);
+      /* o toque ja foi resolvido no solta(); este onclick e a rede de seguranca
+         para quem chega por outro caminho (leitor de tela, clique programado). */
+      b.onclick=function(){ if((new Date()).getTime()-tratado<700) return; arma(); encaixa(p,b,-1); };
+    }
+
     for(i=0;i<pool.length;i++){(function(p){
       var b=el("div","pc "+p.cl,p.tx);
-      b.onclick=function(){ arma();
-        if(b.className.indexOf("usada")>=0) return;
-        if(p.cl===alvo[passoAtual].cl && p.tx===alvo[passoAtual].tx){
-          vs[passoAtual].innerHTML=p.tx; vs[passoAtual].className="vaga "+p.cl+" cheia";
-          b.className="pc "+p.cl+" usada"; sPop(passoAtual); passoAtual++;
-          if(passoAtual>=3){
-            sCerto(); reg("grupo",err===0,err+1);
-            var ce=centroTela(vagas); faisca(ce[0],ce[1],"#ffb45e",16);
-            setTimeout(function(){ idx++;
-              if(idx>=ordem.length){ depoisDaFala("nm_grupo_revela",9000,function(){
-                mostraBanner("Artigo, substantivo e adjetivo formam o <b>grupo nominal</b>!",nMagica); }); }
-              else { err=0; passo(); }
-            },1000);
-          }
-        } else { err++; b.className="pc "+p.cl+" no"; sErro();
-          setTimeout(function(){ if(b.className.indexOf("no")>=0) b.className="pc "+p.cl; },440);
-          if(err===3) consolo(); }
-      };
+      daArrasto(b,p);
       box.appendChild(b);
     })(pool[i]);}
     c.appendChild(box);
-    c.appendChild(el("div","hint","Retangulo, depois oval, depois losango."));
+    c.appendChild(el("div","hint","Arraste a pe&#231;a at&#233; a vaga da mesma forma &#8212; ou toque nela."));
     t.appendChild(c);app.appendChild(t);
     montaBarra("nm_grupo_dica","A forma da pe&#231;a mostra a classe da palavra.");
     if(idx===0) falar("nm_grupo_intro");
@@ -739,10 +1023,38 @@ var PLU=[
  {img:"nm_bicicletas",pre:"As bicicletas",falta:"coloridas",iscas:["colorida","colorido"]},
  {img:"nm_criancas",  pre:"As crian&#231;as",  falta:"alegres",  iscas:["alegre","alegro"]},
  {img:"nm_arvore",    pre:"A &#225;rvore",     falta:"florida",  iscas:["floridas","florido"]}];
+/* ---------- AQUECIMENTO (revisao espacada) ----------
+   Volta ao conceito MAIS ANTIGO (reconhecer nome x adjetivo) bem depois de ele
+   ter sido ensinado, logo antes de subir o degrau da concordancia. Nao e prova:
+   e a lembranca que segura o aprendido. */
+function nAquecimento(){
+  limpa();var t=el("div","tela");setProg(t,60);var c=el("div","centro");
+  c.appendChild(cliqueEl("pq"));
+  c.appendChild(el("div","selo","LEMBRANDO..."));
+  c.appendChild(el("div","balao","Antes de seguir: na legenda <b>a flor amarela</b>, qual palavra diz <b>como &#233;</b>?"));
+  var op=el("div","opts col");
+  var alts=[["a",false],["amarela",true],["flor",false]];
+  var i,resp=false;
+  for(i=0;i<alts.length;i++){(function(txt,certo){
+    var o=el("div","opt",txt);
+    o.onclick=function(){ if(resp)return; arma();
+      if(certo){ resp=true; o.className="opt ok"; sCerto(); elogio(); reg("reconhecer",true,1);
+        var ce=centroTela(o); faisca(ce[0],ce[1],"#ffb45e",14);
+        setTimeout(nPlural,1400); }
+      else { o.className="opt no"; sErro(); consolo(); reg("reconhecer",false,2);
+        setTimeout(function(){ o.className="opt"; },700); }
+    };
+    op.appendChild(o);
+  })(alts[i][0],alts[i][1]);}
+  c.appendChild(op);
+  t.appendChild(c);app.appendChild(t);
+  montaBarra("nm_aquec_dica","O <b>nome</b> diz o que &#233;. O <b>adjetivo</b> diz como &#233;.");
+  falar("nm_aquec_intro");}
+
 function nPlural(){
   var idx=0,err=0;
   function passo(){
-    limpa();var t=el("div","tela");setProg(t,48+idx*3);
+    limpa();var t=el("div","tela");setProg(t,62+idx*2);
     var it=PLU[idx];
     var c=el("div","centro");
     c.appendChild(el("div","selo","TUDO COMBINANDO"));
@@ -782,7 +1094,7 @@ var GEN=[
 function nGenero(){
   var idx=0,err=0;
   function passo(){
-    limpa();var t=el("div","tela");setProg(t,58+idx*3);
+    limpa();var t=el("div","tela");setProg(t,68+idx*2);
     var it=GEN[idx];
     var c=el("div","centro");
     c.appendChild(el("div","selo","MENINO OU MENINA?"));
@@ -797,7 +1109,7 @@ function nGenero(){
           reg("concordancia",err===0,err+1);
           setTimeout(function(){ idx++;
             if(idx>=GEN.length){ depoisDaFala("nm_genero_revela",9000,function(){
-              mostraBanner("O adjetivo combina com o <b>nome</b>: o molhado, a molhada.",nLigar); }); }
+              mostraBanner("O adjetivo combina com o <b>nome</b>: o molhado, a molhada.",nGrau); }); }
             else { err=0; passo(); }
           },900);
         } else { err++; b.className="pc adj no"; sErro(); consolo();
@@ -830,7 +1142,7 @@ var MAGIA=[
 function nMagica(){
   var idx=0,err=0;
   function passo(){
-    limpa();var t=el("div","tela");setProg(t,36+idx*2);
+    limpa();var t=el("div","tela");setProg(t,26+idx*3);
     var it=MAGIA[idx];
     var c=el("div","centro");
     c.appendChild(el("div","selo","FILTRO M&#193;GICO"));
@@ -880,7 +1192,7 @@ var DET=[
 function nDetetive(){
   var idx=0,err=0;
   function passo(){
-    limpa();var t=el("div","tela");setProg(t,44+idx*2);
+    limpa();var t=el("div","tela");setProg(t,38+idx*3);
     var it=DET[idx];
     var c=el("div","centro");
     c.appendChild(el("div","selo","DETETIVE DA REDA&#199;&#195;O"));
@@ -895,7 +1207,7 @@ function nDetetive(){
           reg("reconhecer",err===0,err+1);
           setTimeout(function(){ idx++;
             if(idx>=DET.length){ depoisDaFala("nm_det_revela",9000,function(){
-              mostraBanner("Com bom adjetivo, quem l&#234; acha a foto <b>sem ver</b>!",nGrau); }); }
+              mostraBanner("Com bom adjetivo, quem l&#234; acha a foto <b>sem ver</b>!",nGrupo); }); }
             else { err=0; passo(); }
           },1000);
         } else { err++; d.className="gfoto no"; sErro(); consolo();
@@ -921,7 +1233,7 @@ var GRAU=[
 function nGrau(){
   var idx=0,err=0;
   function passo(){
-    limpa();var t=el("div","tela");setProg(t,52+idx*2);
+    limpa();var t=el("div","tela");setProg(t,74+idx*2);
     var it=GRAU[idx];
     var c=el("div","centro");
     c.appendChild(el("div","selo","ENCOLHE E AUMENTA"));
@@ -971,7 +1283,7 @@ var FAB=[
 function nFabrica(){
   var idx=0,err=0;
   function passo(){
-    limpa();var t=el("div","tela");setProg(t,68+idx*2);
+    limpa();var t=el("div","tela");setProg(t,82+idx);
     var it=FAB[idx];
     var c=el("div","centro");
     c.appendChild(el("div","selo","F&#193;BRICA DE ADJETIVOS"));
@@ -996,7 +1308,7 @@ function nFabrica(){
           reg("morfologia",err===0,err+1);
           setTimeout(function(){ idx++;
             if(idx>=FAB.length){ depoisDaFala("nm_fabrica_revela",10000,function(){
-              mostraBanner("O <b>pedacinho no fim</b> transforma o nome em adjetivo!",nPlural); }); }
+              mostraBanner("O <b>pedacinho no fim</b> transforma o nome em adjetivo!",nLigar); }); }
             else { err=0; passo(); }
           },1500);
         } else { err++; b.className="pc adj no"; sErro();
@@ -1016,7 +1328,7 @@ function nFabrica(){
 
 /* ---------- 9) LIGAR AS COLUNAS ---------- */
 function nLigar(){
-  limpa();var t=el("div","tela");setProg(t,76);
+  limpa();var t=el("div","tela");setProg(t,86);
   var pares=[["cachorro","molhado"],["&#225;rvore","florida"],["port&#227;o","enferrujado"],
              ["crian&#231;as","alegres"],["bicicletas","coloridas"]];
   var dir=[2,4,0,3,1],selE=null,feitos=0,err=0;
@@ -1058,7 +1370,7 @@ function nLigar(){
 /* ---------- 10) CAÇA-PALAVRAS DOS ADJETIVOS ---------- */
 var CACAN=["NOVO","ALTO","LIMPO","ALEGRE","VELHO","MOLHADO"];
 function nCaca(){
-  limpa();var t=el("div","tela");setProg(t,82);
+  limpa();var t=el("div","tela");setProg(t,88);
   var N=9,g=[],i,j,k;
   for(i=0;i<N;i++){g[i]=[];for(j=0;j<N;j++)g[i][j]="";}
   var pos={},achadas={},total=0;
@@ -1082,6 +1394,9 @@ function nCaca(){
   c.appendChild(el("div","selo","QUADRO DE LETRAS"));
   c.appendChild(el("div","balao","Ache os <b>"+total+" adjetivos</b> escondidos."));
   var grade=el("div","grade"),cels=[],sel=null,trava=false;
+  /* onde cada palavra ficou — SO para o auditor jogador conseguir resolver o
+     caca-palavras (clicando ao acaso ele nunca acha). Nao aparece para ninguem. */
+  grade.setAttribute("data-qa",JSON.stringify(pos));
   for(i=0;i<N;i++){ cels[i]=[];
     for(j=0;j<N;j++){ (function(r,c2){
       var cl=el("div","cel",g[r][c2]);
@@ -1142,7 +1457,7 @@ var PROVAN={
         {errado:"alegre",certo:"alegres",alt:["alegres","alegro"]},
         {errado:"velhas",certo:"velho",alt:["velho","velha"]}]};
 function nRevisor(){
-  limpa();var t=el("div","tela");setProg(t,87);
+  limpa();var t=el("div","tela");setProg(t,90);
   var feitos=0,err=0,aberto=null;
   var c=el("div","centro");
   c.appendChild(el("div","selo","REVISOR DA P&#193;GINA"));
@@ -1196,7 +1511,7 @@ var CRUZN=[
  {p:"ALEGRES", d:"Como est&#227;o as crian&#231;as que brincam?"},
  {p:"NOVA",    d:"Como &#233; a horta que acabou de nascer?"}];
 function nCruzada(){
-  limpa();var t=el("div","tela");setProg(t,91);
+  limpa();var t=el("div","tela");setProg(t,92);
   var atual=0,err=0,feitos=0;
   var c=el("div","centro");
   c.appendChild(el("div","selo","CRUZADINHA DA REDA&#199;&#195;O"));
@@ -1218,6 +1533,9 @@ function nCruzada(){
     bal.innerHTML="<b>"+(atual+1)+".</b> "+it.d;
     for(k=0;k<linhas.length;k++) linhas[k].el.className="clinha"+(k===atual?" ativa":"")+(k<feitos?" pronta":"");
     letras.innerHTML="";
+    /* a palavra da vez — SO para o auditor jogador conseguir montar (no acaso
+       ele nunca acerta a ordem). Nao aparece para ninguem. */
+    letras.setAttribute("data-qa",it.p);
     var passo=0,ls=baguncar(it.p.split(""));
     for(k=0;k<ls.length;k++){(function(Lt){
       var b=el("div","tec",Lt);
@@ -1416,12 +1734,20 @@ function crachaEl(funcao){
   return d;
 }
 /* ---------- 17) FIM ---------- */
-function nFim(){limpa();var t=el("div","tela");setProg(t,100);var c=el("div","centro");
-  c.appendChild(imgEl("nm_med","medal"));
+function nFim(){limpa();var t=el("div","tela");setProg(t,100);var c=el("div","centro topo");
+  var med=imgEl("nm_med","medal"); c.appendChild(med); segredoRelatorio(med);
   c.appendChild(el("h1","","Legendista Mestre!"));
   c.appendChild(el("div","sub",(perfil.nome?perfil.nome+", a":"A")+" edi&#231;&#227;o de fotos est&#225; fechada."));
   c.appendChild(crachaEl("Legendista Mestre"));
+  resumoAnimado(c);
+  if(fracos().length){
+    var bt=el("button","btntreino","Treinar o que faltou<small>s&#243; as partes que voc&#234; quer melhorar</small>");
+    bt.onclick=function(){arma();sTap();treinarFracos();};
+    c.appendChild(bt);
+  }
+
   var b=el("button","btn dourado","Jogar de novo");b.style.marginTop="12px";
+
   b.onclick=function(){arma();sTap();telaCapa();};c.appendChild(b);
   t.appendChild(c);app.appendChild(t);sFesta();festa();salva();
   montaBarra(null,null);
@@ -1464,6 +1790,123 @@ function zeraProgresso(){
 }
 
 /* ---------- PAINEL DO PROFESSOR ---------- */
+
+/* ---------- RELATORIO DO FIM (so para o professor) ----------
+   Pedido do Marcos (ago/2026): relatorio no fim da atividade, mas SEM botao e
+   SEM o painel aparecendo para os alunos. Solucao: gesto discreto — segurar a
+   MEDALHA por 2 segundos. Crianca nao descobre; o professor sabe.
+   O ?painel no endereco continua funcionando.                                */
+function segredoRelatorio(elm){
+  if(!elm) return;
+  var tmr=null;
+  function comeca(){ if(tmr) clearTimeout(tmr);
+    tmr=setTimeout(function(){ tmr=null; telaPainel(); },2000); }
+  function para(){ if(tmr){ clearTimeout(tmr); tmr=null; } }
+  elm.addEventListener("mousedown",comeca);
+  elm.addEventListener("touchstart",comeca);
+  elm.addEventListener("mouseup",para);
+  elm.addEventListener("mouseleave",para);
+  elm.addEventListener("touchend",para);
+  elm.addEventListener("touchcancel",para);
+}
+
+/* parecer em PALAVRAS, nao so porcentagem — o professor precisa registrar isso
+   no diario, e "72%" nao diz nada. (pedido do Marcos, ago/2026) */
+function parecerDe(p){
+  if(p>=0.75) return ["Dominou","dom"];
+  if(p>=0.50) return ["Est&#225; construindo","cons"];
+  return ["Precisa retomar","ret"];
+}
+/* ---------- BOLETIM ANIMADO DO FIM (para a CRIANCA ver) ----------
+   Pedido do Marcos (ago/2026): "um final bem legal com animacoes mostrando o
+   desempenho". Regra da casa: NUNCA e prova disfarcada — aqui nao existe nota
+   nem "voce errou". Mostra o que ela APRENDEU, com estrela que acende uma a
+   uma e barra que cresce. O parecer seco (Dominou / Precisa retomar) fica so
+   no relatorio do professor, atras do gesto secreto.                        */
+/* nomes em linguagem de crianca para o boletim do fim */
+var ROTCRI={reconhecer:"Achar as palavras certas",grupo:"Montar o grupo de palavras",
+  concordancia:"Combinar as palavras",morfologia:"Formar palavras novas",producao:"Escrever a legenda"};
+function resumoAnimado(pai){
+  var R=(typeof ROTCRI!=="undefined")?ROTCRI:{};
+  var cx=el("div","boletim");
+  cx.appendChild(el("div","btit","O QUE VOC&#202; APRENDEU HOJE"));
+  var k,barras=[],i=0;
+  for(k in DOM){ if(!DOM.hasOwnProperty(k)) continue;
+    var p=DOM[k]||0, n=(p>=0.75)?3:((p>=0.5)?2:1);
+    var nome=String(R[k]||k).replace(/\s*\([^)]*\)/g,"");
+    var ln=el("div","blin");
+    var top=el("div","btop");
+    top.appendChild(el("div","bnome",nome));
+    var est=el("div","bestrelas"),s;
+    for(s=0;s<3;s++){
+      var e=el("i","estrela"+(s<n?" on":""));
+      e.style.webkitAnimationDelay=(320+i*260+s*150)+"ms";
+      e.style.animationDelay=(320+i*260+s*150)+"ms";
+      est.appendChild(e);
+    }
+    top.appendChild(est); ln.appendChild(top);
+    var bar=el("div","bbar"),fi=el("i"); bar.appendChild(fi); ln.appendChild(bar);
+    barras.push([fi,Math.max(8,Math.round(p*100)),320+i*260]);
+    cx.appendChild(ln); i++;
+  }
+  /* acertos subindo de 0 ate o total */
+  var tot=MED.ev.length,acc=0,z;
+  for(z=0;z<MED.ev.length;z++) acc+=MED.ev[z].ok;
+  var mins=Math.max(1,Math.round(((new Date()).getTime()-MED.ini)/60000));
+  var pl=el("div","bplacar","<b>0</b> acertos");
+  cx.appendChild(pl);
+  cx.appendChild(el("div","btempo","Voc&#234; trabalhou <b>"+mins+"</b> minuto"+(mins===1?"":"s")+" sem desistir."));
+  var frase=(acc>=tot*0.8)?"Voc&#234; foi <b>muito bem</b> do come&#231;o ao fim!":
+            ((acc>=tot*0.5)?"Voc&#234; <b>aprendeu bastante</b> hoje. Continua assim!":
+                            "Voc&#234; <b>chegou at&#233; o fim</b>. Isso &#233; o que vale!");
+  cx.appendChild(el("div","bfrase",frase));
+  pai.appendChild(cx);
+  /* as barras crescem depois de entrar na tela (senao nao anima) */
+  setTimeout(function(){ var q;
+    for(q=0;q<barras.length;q++){ (function(b){
+      setTimeout(function(){ b[0].style.width=b[1]+"%"; },b[2]);
+    })(barras[q]); }
+  },60);
+  /* o numero de acertos sobe contando */
+  if(tot>0){ var v=0,pa=Math.max(28,Math.round(1400/Math.max(1,acc)));
+    var tm=setInterval(function(){
+      if(!cx.parentNode){ clearInterval(tm); return; }
+      v++; if(v>acc){ clearInterval(tm); return; }
+      pl.innerHTML="<b>"+v+"</b> acerto"+(v===1?"":"s");
+      try{ tom(520+v*8,0.05,"triangle",0.07); }catch(e){}
+    },pa);
+  }
+}
+/* fases que treinam cada objetivo */
+var TREINO={reconhecer:nLupa,grupo:nGrupo,concordancia:nPlural,morfologia:nGrau,producao:nLegenda};
+function TELAFIM(){ nFim(); }
+/* ---------- TREINAR SO O QUE FALTOU ----------
+   Pergunta do Marcos (ago/2026): "se ela nao domina, ela consegue fazer so as
+   atividades que nao domina?". Da: o app ja mede cada objetivo (DOM). Aqui ele
+   monta um percurso CURTO so com as fases dos objetivos fracos e volta para a
+   medalha no fim. A crianca nao repete o que ja sabe — isso e o que mantem ela
+   na tarefa em vez de enjoar.
+   Truque para nao mexer em nenhuma fase: enquanto o treino roda, o mostraBanner
+   ignora o "proximo" original e chama a proxima fase da fila.               */
+var FILATREINO=null;
+var _bannerOriginal=mostraBanner;
+mostraBanner=function(msg,cb){ _bannerOriginal(msg, FILATREINO ? proximoTreino : cb); };
+function fracos(){
+  var k,out=[];
+  for(k in DOM){ if(DOM.hasOwnProperty(k)&&(DOM[k]||0)<0.75&&TREINO[k]) out.push(k); }
+  return out;
+}
+function proximoTreino(){
+  if(!FILATREINO||!FILATREINO.length){ FILATREINO=null; salva(); TELAFIM(); return; }
+  var f=FILATREINO.shift();
+  try{ f(); }catch(e){ proximoTreino(); }
+}
+function treinarFracos(){
+  var f=fracos(),i,fila=[];
+  for(i=0;i<f.length;i++) fila.push(TREINO[f[i]]);
+  if(!fila.length){ TELAFIM(); return; }
+  FILATREINO=fila; proximoTreino();
+}
 function pct(x){return Math.round(x*100)+"%";}
 function telaPainel(){
   try{narr.pause();}catch(e){}
@@ -1473,13 +1916,16 @@ function telaPainel(){
   var h="<h2>A Legenda do Clique &#8212; parecer (4&#186; ano)</h2>";
   h+="<div><b>Aluno(a):</b> "+(perfil.nome||"(sem nome)")+" &#183; <b>Tempo:</b> ~"+mins+" min &#183; <b>Dicas usadas:</b> "+MED.dicas+"</div>";
   h+="<div class='bloco'><b>Acertos:</b> "+acc+" de "+tot+" respostas.</div>";
-  h+="<table><tr><th>O que foi trabalhado</th><th>Dom&#237;nio</th></tr>";
+  h+="<table><tr><th>O que foi trabalhado</th><th>Dom&#237;nio</th><th>Parecer</th></tr>";
   var CONCN={reconhecer:"Reconhecer substantivo e adjetivo",grupo:"Montar o grupo nominal",
              concordancia:"Concord&#226;ncia nominal (g&#234;nero e n&#250;mero)",
              morfologia:"Formar adjetivo por sufixo",producao:"Escrever a legenda (produ&#231;&#227;o)"};
   var kk;
-  for(kk in DOM){ if(DOM.hasOwnProperty(kk)) h+="<tr><td>"+(CONCN[kk]||kk)+"</td><td>"+pct(DOM[kk])+"</td></tr>"; }
+  var ndom=0,nconc=0;
+  for(kk in DOM){ if(DOM.hasOwnProperty(kk)){ var pr=parecerDe(DOM[kk]); nconc++; if(DOM[kk]>=0.75) ndom++;
+    h+="<tr><td>"+(CONCN[kk]||kk)+"</td><td>"+pct(DOM[kk])+"</td><td class='"+pr[1]+"'>"+pr[0]+"</td></tr>"; } }
   h+="</table>";
+  h+="<div class='resumo'>Resumo da aula: dominou <b>"+ndom+"</b> de <b>"+nconc+"</b> objetivos. "+(ndom===nconc?"Pode seguir para o pr&#243;ximo conte&#250;do.":(ndom>=nconc/2?"Vale retomar os itens marcados em amarelo e vermelho.":"Recomendo repetir a atividade antes de avan&#231;ar."))+"</div>";
   if(MED.legendas&&MED.legendas.length){
     h+="<div class='bloco'><b>Legendas escritas pelo aluno:</b><ul>";
     for(i=0;i<MED.legendas.length;i++) h+="<li>&#8220;"+MED.legendas[i]+"&#8221;</li>";
